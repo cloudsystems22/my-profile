@@ -20,10 +20,10 @@ jobs:
         node-version: '14.x'
         
     - name: Build web-app
-      run: | 
+      run: |
         npm ci
         npm run build
-    - name: Buld to gh-pages
+    - name: Deploy to gh-pages
       uses: peaceiris/actions-gh-pages@v3
       with: 
         github_token: ${{ secrets.GITHUB_TOKEN }}
